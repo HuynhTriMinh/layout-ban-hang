@@ -1,0 +1,76 @@
+.menu { 
+    width: 1200px;  
+    background: #F2f2f2;
+    height: 50px;
+    margin-left: 70px;
+    border:1px solid #ccc;
+}
+.menu ul {     
+    padding: 0px; 
+    list-style: none; 
+}
+.menu ul li{
+    float: left;
+    padding: 0px 15px;
+    margin: -15px 0px 0px 28px;
+    position: relative;
+}
+.menu ul li ul{
+    width: 130px;
+    position: absolute;
+    background: #F2f2f2;
+    height: 135px;
+    display: none;/* Ẩn phần tử con*/
+}
+.menu ul li ul li{
+    width:100%;
+    margin-left: -16px;
+    position: relative;
+}
+.menu ul li ul li a{
+    text-decoration: none;
+    color: #000;
+    text-transform:uppercase;
+    line-height: 50px;
+    font-size: 16px;
+}
+.menu ul li ul li a:hover{
+    color: blue;
+    cursor: pointer;
+}
+.menu ul li:hover ul{
+    display: block;/*Hiện Phần Tử */
+}
+.menu ul li a{
+    text-decoration: none;
+    color: #000;
+    text-transform:uppercase;
+    line-height: 50px;
+    font-size: 16px;
+}
+.menu ul li a:hover{
+    color: red;
+    cursor: pointer;
+}
+.menu ul li ul li ul{
+    width: 130px;
+    position: absolute;
+    background: #F2f2f2;
+    left: 100%;
+    top: 0px;
+    display: block;/* Ẩn phần tử con*/
+}
+.menu ul li ul li ul li a{
+    text-decoration: none;
+    color: #000;
+    text-transform:uppercase;
+    line-height: 50px;
+    font-size: 16px;
+}
+.menu ul li ul li ul li a:hover{
+    color: blue;
+    cursor: pointer;
+}
+.menu ul li ul li:hover ul{
+    display: block;/*Hiện Phần Tử */
+}

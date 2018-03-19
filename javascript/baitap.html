@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bài tập</title>
+</head>
+<body>
+    <div class="tinh" style="text-align: center;">
+            <span><b>Tính giá in nhanh</b></span>
+        <form>
+            <p>Nhập số trang A4:<input type="text" id="ketqua" name="nhapso"></p>
+            <p><input type="button" name="ketqua" onclick="tinh()" value="Kết Quả"></p>
+            <b style="padding: 5px 0; display: block;">Thành Tiền:</b>
+            <div class="clr"></div>
+            <div id="tt" name="tt" style="color: #F00; font-weight: bold; font-size: 15px;"></div>
+        </form>
+        <script>
+            function tinh(){
+                var kq = "";
+                var ketqua = document.getElementById("ketqua").value;
+                if(ketqua<=10)
+                {
+                    kq = ketqua*8000;
+                }
+                else if(ketqua<=20)
+                {
+                    kq = ketqua*5000;
+                }
+                else if(ketqua<=50)
+                {
+                    kq = ketqua*4500;
+                }
+                else if(ketqua<=100)
+                {
+                    kq = ketqua*2500;
+                }
+                else if(ketqua<=150)
+                {
+                    kq = ketqua*2300;
+                }
+                else if(ketqua<=200)
+                {
+                    kq = ketqua*2000;
+                }
+                else if(ketqua<=500)
+                {
+                    kq = ketqua*1800;
+                }
+                else{
+                    kq = ketqua*1500;
+                }
+                document.getElementById("tt").innerHTML = kq.toString() +"VNĐ";
+            }
+            
+        </script>
+    </div>
+</body>
+</html>

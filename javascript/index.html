@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript</title>
+</head>
+<body>
+    <!-- <script>
+        alert('Hello Word!');
+    </script> -->
+    <!-- <input type="button" onclick="alert('Hello word!')" value="Click"> -->
+<div style="width: 400px; height: 400px;">
+    <!-- <div class="trang" style="background:red; width: 50px; height: 50px; float: left;"></div>
+    <div class="den" style="background: black; width: 50px; height: 50px; float: left;"></div> -->
+    <script>
+    function bancovua($soco){
+        for(var i=1; i<=$soco; i++){
+            for(var j=1; j<=$soco; j++){
+                if((i+j)%2==0){
+                    document.write('<div class="trang" style="background:red; width: 50px; height: 50px; float: left;"></div>');
+                }
+                else{
+                document.write('<div class="den" style="background: black; width: 50px; height: 50px; float: left;"></div>');
+                }
+            }
+        }
+    }
+    bancovua(8);
+    function kiemtrachanle(so){
+        if(so%2==0)
+        {
+            document.write(so + "là số chẵn");
+        }
+        else{
+            document.write(so + "là số lẻ");
+        }
+    }
+    kiemtrachanle(2);
+    document.write("<br>");
+
+    function kiemtranamnhuan(nam){
+        if(nam%4==0)
+        {
+            document.write(nam + "là năm nhuận");
+        }
+        if(nam%100==0){
+            if(nam%400==0){
+                document.write(nam + "là năm nhuận");
+            }
+            else{
+                document.write(nam + "không phải năm nhuận");
+            }     
+        }
+    }
+    kiemtranamnhuan(1994);
+    function tinhtong(a,b){
+        return a + b;
+    }
+    var c = tinhtong(5,10);
+    document.write(c);
+    document.write("<br>");
+
+    function tinhtong1(a,b){
+        document.write(a+b);
+    }
+    tinhtong1(5,10);
+    document.write("<br>");
+
+    var bien1="Nội dung biến toàn cục";
+    function goibien(){
+        var bien2="Nội dung biến cục bộ";
+        document.write(bien1);
+    }
+    goibien();
+    document.write("<br>");
+
+    var name_array = new Array(1,2,3);
+    var name_array2= ['A','B','C'];
+    document.write(name_array[0]);
+    document.write("<br>");
+    document.write(name_array2[2]);
+    document.write("<br>");
+    for(var i=0; i<name_array.length; i++){
+        document.write(name_array[i]);
+    }
+
+    document.write("<br>");
+    var i = 0;
+    while(i< name_array.length){
+        document.write(name_array[i]);
+        i++;
+    }
+    document.write("<br>");
+    
+    var array2=['A','B','C','D','E'];
+    document.write(array2.valueOf() + '<br>');//nối các phần tử với nhau vào một chuỗi cách nhau bởi dấu phẩy
+    array2.push('F');//thêm 1 phần tử vào cuối mảng
+    document.write(array2.valueOf() + '<br>');
+    array2.pop();//xóa một phần tử ở cuối mảng
+    document.write(array2.valueOf() + '<br>');
+    array2.shift();//xóa một phần tử ở đầu mảng
+    document.write(array2.valueOf() + '<br>');
+    array2.unshift('G');//thêm một phần tử ở đầu mảng
+    document.write(array2.valueOf() + '<br>');
+    var array3= ['A','B','C','D','E','F','G','H'];
+    array3.splice(1,3,'C1','D1');//splice 1,3 là xóa 3 phần tử bắt đầu từ vị trí 1, C1,D1 là 2 phần tử thêm vào
+    document.write(array3.valueOf() + '<br>');
+    var array4=['A1','B1','C1'];
+    array3.splice(1,3,array4,'D1');
+    document.write(array3.valueOf() + '<br>');
+    var array5= ['A','H','C','D','E','G','F','B'];
+    array5.sort();//sắp xếp theo thứ tự anpha
+    document.write(array5.valueOf() + '<br>');
+    var array6=[1,2,4,3,6,7,5,8];
+    array6.sort();//sắp xếp theo thứ tự anpha
+    document.write(array6.valueOf() + '<br>');
+    array6.reverse();//sắp xếp theo ngược lại anpha
+    document.write(array6.valueOf() + '<br>');
+    document.write(array5.concat(array6) + '<br>');
+    // var i = 1;
+    
+    // while(i<=8)
+    // {
+    //     var j = 1;
+    //     while(j<=8){
+    //         if((i+j)%2==0){
+    //             document.write('<div class="trang" style="background:red; width: 50px; height: 50px; float: left;"></div>');   
+    //         }
+    //         else{
+    //             document.write('<div class="den" style="background: black; width: 50px; height: 50px; float: left;"></div>');  
+    //         } 
+    //         j++;
+    //     }
+    //     i++;
+        
+    // }
+    // function Sad($bien){
+    //     document.write($bien);
+    // }
+    // Sad(1);
+    </script>
+</div>
+    <script>
+        //var bien1="Xin chào các bạn!";
+        //var bien2= 1;
+        //var bien3, bien4, bien5;
+        //bien3= "Nội dung biến 3";
+        //alert(bien3); //alert hiển thị thông báo
+        //document.write('Xin chào các bạn!'); //In nội dung ra màn hình
+        //confirm('Cho phép hiển thị thông báo?');//confirm hiển thị bản ok/hủy, ok sẽ hiển thị nội dung ra
+        //prompt('Nhập họ tên!');//cho phép người dùng nhập nội dung
+        //var ten = prompt ('Nhập họ tên!');
+        //document.write('Xin chào:' + ten);//in tên ra màn hình sau khi nhập
+        //console.log('Nội dung console log');//hiển thị ở f12 phần console
+        /*
+        var abc; //đúng
+        var _abc; //đúng
+        var __abc; //đúng
+        var abc99; //đúng
+        var 90abc; //sai
+        var a b c; //sai
+        */
+        //var a, b, cong, tru, nhan, chia, chialaydu;
+        //a=5;
+        //b=6;
+        //a = ++a;//Tăng lên 1 đơn vị trước khi gán
+        // a = a++; //Tăng lên 1 đơn vị sau khi gán
+        // b = b--; //Giảm 1 đơn vị trước khi gán
+        // b = --b; //Giảm 1 đơn vị sau khi gán
+        //a+=b; //=> a = a + b
+        //a-=b;//=> a = a - b
+        //cong = a + b;
+        // tru = a - b;
+        // nhan = a * b;
+        // chia = a / b;
+        // chialaydu = a % b;
+        // console.log('Phép cộng:' + cong + 'Phép trừ' + tru + 'Phép nhân' + nhan + 'Phép chia' + chia);
+        // console.log('Chia Lấy Dư:' + chialaydu);
+        //console.log('Phép cộng:' + cong);
+        //console.log(a>b);
+        //console.log(a<b);
+        // var c, d;
+        // c= true;
+        // d= false;
+        // console.log(c && d); // false
+        // console.log(c || d); //true
+        // console.log(!c); //true
+        // var so1, so2;
+        // so1= 10;
+        // so2 = 15;
+        // if(so1 > so2){
+        //     console.log(so1);
+        // }
+        // else if (so1 < so2){
+        //     console.log(so2);
+        // }
+        // else{
+        //     console.log('Hai số bằng nhau!');
+        // }
+
+        // var so = prompt ('Nhập số!')
+        // if(so > 0 && so%2==0){
+        //     document.write('Số'  +  so +'là số chẵn');
+        // }
+        // else if(so > 0 && so%2!=0){
+        //     document.write('Số'  +  so +'là số lẻ');
+        // }
+        // else{
+        //     document.write('Không phải là số');
+        // }
+        
+        // var number = parseInt(prompt("Nhập số cần kiểm tra"));
+        // var mod = (number%2);
+        // switch (mod)
+        // {
+        //     case 0 : {
+        //         document.write(number + "là số chẵn");
+        //         break;
+        //     }
+        //     case 1 : {
+        //         document.write(number + "là số lẻ");
+        //         break;
+        //     }
+        //     default : {
+        //         document.write("Ký tự bạn nhập không phải số");
+        //     }
+        // }
+    </script>
+</body>
+</html>
